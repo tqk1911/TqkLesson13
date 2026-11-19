@@ -1,0 +1,28 @@
+﻿@model TranQuangKhai_241230756.Models.HangHoa
+@{
+    ViewData["Title"] = "Create";
+}
+<h4>Trần Quang Khải</h4>
+<h4>Thêm Hàng Hóa Mới</h4>
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="MaLoai"></label><br />
+        <select asp-for="MaLoai" asp-items="(SelectList)ViewBag.MaLoai"></select>
+    </div>
+    <div>
+        <label asp-for="TenHang"></label><br />
+        <input asp-for="TenHang" />
+        <span asp-validation-for="TenHang" style="color:red"></span>
+    </div>
+    <div>
+        <label asp-for="Gia"></label><br />
+        <input asp-for="Gia" />
+        <span asp-validation-for="Gia" style="color:red"></span>
+    </div>
+    <div>
+        <label asp-for="Anh"></label><br />
+        <input asp-for="Anh" />
+        <span asp-validation-for="Anh" style="color:red"></span>
+    </div>
+    <input type="submit" value="Create" />
+</form>
